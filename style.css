@@ -1,0 +1,169 @@
+/* yay fonts! see fontsquirrel.com for how this was generated */
+@font-face {
+    font-family: "short_stackregular";
+    src: url("fonts/shortstack-regular.woff2") format("woff2"),
+         url("fonts/shortstack-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* center the page */
+    margin-left: auto;
+    margin-right: auto;
+    /* keep line lengths and heights readable */
+    max-width: 90ch;
+    line-height: 1.75;
+    /* fun background! */
+    background-color: #a5cfeeff;
+    background-image: url(media/background.png);
+    /* hello old friend from 10 lines up */
+    font-family: "short_stackregular", "Comic Sans", sans-serif;
+}
+
+/* give a little bit of space to each side of the rounded box containing the main content */
+div.main_container {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* little bit of space above and below the header */
+header {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+header img {
+    height: auto;
+    /* force a little space on each side of the image */
+    max-width: 98%;
+    /* center the image in the header element */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    /* add a little bit of space inside the box */
+    padding: 10px;
+    /* black on white is most readable, fite me */
+    background-color: white;
+    /* top left corner should not be rounded because of the tabs */
+    border-radius: 0 20px 20px 20px;
+    /* rounded corners, black border. simple! */
+    border-style: solid;
+    /* if you update this, make sure to edit the top value in the nav li rule */
+    border-width: 3px;
+    border-color: black;
+    /* magic. this introduces a new stacking context that allows the selected
+     * tab to be placed above it and the unselected tabs below it */
+    position: relative;
+}
+
+nav ul {
+    /* don't show bullets on nav list */
+    list-style-type: none;
+    /* no extra space needed */
+    margin: 0;
+    padding: 0;
+    /* also magic. this introduces a block layout context so what we do next
+     * doesn't cause the side of this list to become zero */
+    display: flow-root;
+}
+
+nav li {
+    /* force list to be on same line. this introduce a block layout context,
+     * hence the magic needed earlier. */
+    float: left;
+    /* unselected tabs are slightly darker */
+    background-color: #ccc;
+    /* rounded corners just on the top of the tabs */
+    border-radius: 20px 20px 0 0;
+    /* no border on the bottom */
+    border-style: solid solid none solid;
+    border-width: 3px;
+    border-color: black;
+    /* fixed width tabs */
+    width: 9ch;
+    /* push the tabs downwards by the size of the main body's border.
+     * for the selected tab with a high z-index, this will make it display
+     * over the border, making it look like the tab + the body forms a
+     * contiguous shape like a folder. note: as mentioned in the nav ul rule
+     * the usual trick of setting overflow: hidden doesn't work because it
+     * prevents any part of the tabs from being visible beyond the bounding box
+     * of the list, which is exactly what we are trying to do here. */
+    position: relative;
+    top: 3px;
+}
+
+nav li.selected {
+    /* as mentioned earlier, display the selected tab over top of the main
+     * body's rectangle / border */
+    z-index: 1;
+    background-color: white;
+}
+
+/* tabs look weird when they start getting scrunched, so switch them to being
+ * little bubble selectors instead */
+@media (max-width: 45ch) {
+    nav ul {
+        /* more spacing below the bubbles since they aren't tabs and should
+         * not appear to be attached to the body anymore */
+        padding-bottom: 5px;
+    }
+
+    nav li {
+        /* all sides should have border */
+        border-style: solid;
+        /* all corners should be round */
+        border-radius: 20px;
+        /* more spacing around the bubbles since they aren't tabs anymore */
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    main {
+        /* the top left corner should be rounded now */
+        border-radius: 20px;
+    }
+}
+
+nav li a {
+    /* use up the full space of the tab */
+    display: block;
+    text-align: center;
+    color: black;
+    /* no underline on my tabs pls */
+    text-decoration: none;
+}
+
+p {
+    /* paragraphs don't need *that* much space */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+ul, ol {
+    /* lists don't need *that* much space */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 8px;
+    /* add a visual divider via border beneath the page header */
+    border-style: none none solid none;
+    /* default h1 font size is 2em, make it a bit smaller */
+    font-size: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* headers don't need *that* much space */
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* vim: ts=4 sts=4 sw=4 et
+*/
