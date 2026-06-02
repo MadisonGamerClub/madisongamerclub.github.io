@@ -168,30 +168,34 @@ h1 {
 h2 {
     font-size: 1.4em;
     margin-bottom: 0;
+    /* hacky text outline */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 summary {
     /* make collapsible sections header-like */
     font-size: 1.3em;
+    /* hacky text outline */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* Rainbow things :3 */
-details:nth-of-type(8n + 1) summary { color: #d41d1d; } /* red */
-details:nth-of-type(8n + 2) summary { color: #b16c00; } /* orange */
-details:nth-of-type(8n + 3) summary { color: #7b7900; } /* yellow */
-details:nth-of-type(8n + 4) summary { color: #007b00; } /* green */
-details:nth-of-type(8n + 5) summary { color: #009797; } /* cyan */
-details:nth-of-type(8n + 6) summary { color: #0000da; } /* blue */
-details:nth-of-type(8n + 7) summary { color: #860086; } /* purple */
-details:nth-of-type(8n + 8) summary { color: #c000c0; } /* magenta */
-h2:nth-of-type(8n + 1) { color: #d41d1d; } /* red */
-h2:nth-of-type(8n + 2) { color: #b16c00; } /* orange */
-h2:nth-of-type(8n + 3) { color: #7b7900; } /* yellow */
-h2:nth-of-type(8n + 4) { color: #007b00; } /* green */
-h2:nth-of-type(8n + 5) { color: #009797; } /* cyan */
-h2:nth-of-type(8n + 6) { color: #0000da; } /* blue */
-h2:nth-of-type(8n + 7) { color: #860086; } /* purple */
-h2:nth-of-type(8n + 8) { color: #c000c0; } /* magenta */
+details:nth-of-type(8n + 1) summary { color: #ff3737; } /* red */
+details:nth-of-type(8n + 2) summary { color: #ff9b00; } /* orange */
+details:nth-of-type(8n + 3) summary { color: #fffc52; } /* yellow */
+details:nth-of-type(8n + 4) summary { color: #73f673; } /* green */
+details:nth-of-type(8n + 5) summary { color: #7efdfd; } /* cyan */
+details:nth-of-type(8n + 6) summary { color: #4d9bff; } /* blue */
+details:nth-of-type(8n + 7) summary { color: #aa84ff; } /* purple */
+details:nth-of-type(8n + 8) summary { color: #ff7cff; } /* magenta */
+h2:nth-of-type(8n + 1) { color: #ff3737; } /* red */
+h2:nth-of-type(8n + 2) { color: #ff9b00; } /* orange */
+h2:nth-of-type(8n + 3) { color: #fffc52; } /* yellow */
+h2:nth-of-type(8n + 4) { color: #73f673; } /* green */
+h2:nth-of-type(8n + 5) { color: #7efdfd; } /* cyan */
+h2:nth-of-type(8n + 6) { color: #4d9bff; } /* blue */
+h2:nth-of-type(8n + 7) { color: #aa84ff; } /* purple */
+h2:nth-of-type(8n + 8) { color: #ff7cff; } /* magenta */
 
 /* vim: ts=4 sts=4 sw=4 et
 */
