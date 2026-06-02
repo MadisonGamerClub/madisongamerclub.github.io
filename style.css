@@ -25,7 +25,7 @@ body {
 div.main_container {
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 /* little bit of space above and below the header */
@@ -106,7 +106,7 @@ nav li.selected {
 
 /* tabs look weird when they start getting scrunched, so switch them to being
  * little bubble selectors instead */
-@media (max-width: 45ch) {
+@media (max-width: 60ch) {
     nav ul {
         /* more spacing below the bubbles since they aren't tabs and should
          * not appear to be attached to the body anymore */
@@ -141,13 +141,19 @@ nav li a {
 p {
     /* paragraphs don't need *that* much space */
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 ul, ol {
     /* lists don't need *that* much space */
     margin-top: 0;
     margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* headers don't need *that* much space */
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -159,11 +165,33 @@ h1 {
     font-size: 1.7em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    /* headers don't need *that* much space */
-    margin-top: 0px;
-    margin-bottom: 10px;
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 0;
 }
+
+summary {
+    /* make collapsible sections header-like */
+    font-size: 1.3em;
+}
+
+/* Rainbow things :3 */
+details:nth-of-type(8n + 1) summary { color: #d41d1d; } /* red */
+details:nth-of-type(8n + 2) summary { color: #b16c00; } /* orange */
+details:nth-of-type(8n + 3) summary { color: #7b7900; } /* yellow */
+details:nth-of-type(8n + 4) summary { color: #007b00; } /* green */
+details:nth-of-type(8n + 5) summary { color: #009797; } /* cyan */
+details:nth-of-type(8n + 6) summary { color: #0000da; } /* blue */
+details:nth-of-type(8n + 7) summary { color: #860086; } /* purple */
+details:nth-of-type(8n + 8) summary { color: #c000c0; } /* magenta */
+h2:nth-of-type(8n + 1) { color: #d41d1d; } /* red */
+h2:nth-of-type(8n + 2) { color: #b16c00; } /* orange */
+h2:nth-of-type(8n + 3) { color: #7b7900; } /* yellow */
+h2:nth-of-type(8n + 4) { color: #007b00; } /* green */
+h2:nth-of-type(8n + 5) { color: #009797; } /* cyan */
+h2:nth-of-type(8n + 6) { color: #0000da; } /* blue */
+h2:nth-of-type(8n + 7) { color: #860086; } /* purple */
+h2:nth-of-type(8n + 8) { color: #c000c0; } /* magenta */
 
 /* vim: ts=4 sts=4 sw=4 et
 */
