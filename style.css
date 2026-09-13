@@ -157,6 +157,27 @@ p {
     margin-bottom: 10px;
 }
 
+/* Easter egg mobile-friendly tooltips */
+span[title] {
+    position: relative;
+    display: inline-flex;
+    justify-content: right;
+}
+span[title]:focus::after {
+    content: attr(title);
+    white-space: pre;
+    line-height: 1;
+    position: absolute;
+    top: 90%;
+    background-color: #eee;
+    border: 1px dashed;
+    width: fit-content;
+    padding: 3px;
+    z-index: 1;
+    font-style: italic;
+    font-size: 80%;
+}
+
 ul, ol {
     /* lists don't need *that* much space */
     margin-top: 0;
